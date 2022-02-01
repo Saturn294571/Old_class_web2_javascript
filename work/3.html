@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script >
+        function setTextColor(color){
+            var aList = document.querySelectorAll('a');
+            var i = 0;
+            while(i<aList.length){
+            aList[i].style.color = color;
+            i++;
+            }
+            };
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+        if(self.value == 'Night'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            self.value = 'Day'; 
+            setTextColor('aqua')
+    
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            self.value = 'Night';
+            setTextColor('blue')
+        }
+        };
+        </script>
+        <title>WEB1-javascript</title>
+    </head>
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <!--<input type="button" value="night" onclick="
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+
+        ">
+        <input type="button" value="day" onclick="
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+
+        ">-->
+        <input type="button" value="imgChange" onclick="
+            var imgName = document.querySelector('img').src;
+            document.querySelector('img').src = 'kimdoe_img.png'
+            if (imgName == 'http:\/\/127.0.0.1:5500/work/kimdoe_img.png'){
+                document.querySelector('img').src = 'asd.jpg'
+            }
+        ">
+        <br>
+        <input id="Switch" type="button" value="Night" onclick="
+        nightDayHandler(this);
+        ">
+
+        <ol>
+            <li><a href="1.html">Html</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">javascript</a></li>
+        </ol>
+         <h2>javascript</h2>
+         <img src="asd.jpg" alt="img1" style="width: 30%;">
+        <p>
+            JavaScript , often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.[11] Over 97% of websites use JavaScript on the client side for web page behavior,[12] often incorporating third-party libraries.[13] All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+
+JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[14] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+
+The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics facilities. In practice, the web browser or other runtime system provides JavaScript APIs for I/O.
+
+JavaScript engines were originally used only in web browsers, but are now core components of some servers and a variety of applications. The most popular runtime system for this usage is Node.js.
+
+Although Java and JavaScript are similar in name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.
+        </p>
+    </body>
+</html>
